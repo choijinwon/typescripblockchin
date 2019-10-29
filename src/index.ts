@@ -1,22 +1,28 @@
-  class Human {
-   public name:string;
-   public age:number;
-   public gender:string;
-   constructor(name:string, age:number, gender:string){
-      this.name = name;
-      this.age = age;
-      this.gender = gender;
-   }
+class Block {
+   public index:number;
+   public hash:string;
+   public previousHash:string;
+   public data:string;
+   public timestamp:number;
+   constructor(
+      index:number,
+      hash:string,
+      previousHash:string,
+      data:string,
+      timestmp:number
+      )
+      {
+         this.index = index;
+         this.hash = hash;
+         this.previousHash = previousHash;
+         this.data = data;
+         this.timestamp = timestmp;
+      }
 }
 
-//인터페이스들은 컴파일 되지 않는다.
-const lynn  = new Human("lynn",37,"female");
 
-
-const sayHi = (person):string => {
-   return `Hello ${person.name}, you are ${person.age}, ${person.gender}`
-};
-
-console.log(sayHi(lynn));
+const genesisBlock:Block = new Block(0,"1111111111","","Lancoin",123456);
+let blockchin:[Block] = [genesisBlock];
+console.log(blockchin);
 
 export{};
