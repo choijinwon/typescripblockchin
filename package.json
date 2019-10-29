@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts":{
+  "scripts": {
     "start": "tsc-watch --onSuccess \" node dist/index.js\" "
   },
   "devDependencies": {
-    "tsc-watch":"^1.0.17"
+    "tsc-watch": "^1.0.17"
+  },
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
   }
 }
